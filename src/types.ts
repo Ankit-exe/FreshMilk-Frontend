@@ -7,3 +7,23 @@ export type User = {
     country: string;
 
 }
+
+export type MenuItem = {
+    _id: string;
+    name: string;
+    price: number
+}
+
+export type Shop = {
+    _id: string;
+    user: string;
+    shopName: string;
+    city: string;
+    country: string;
+    deliveryPrice: number;
+    estimatedDeliveryTime: number;
+    cuisine: string[],
+    menuItems: MenuItem[],
+    imageUrl: string,
+    lastUpdated: string,
+}

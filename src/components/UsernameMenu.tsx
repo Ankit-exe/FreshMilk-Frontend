@@ -30,6 +30,14 @@ export const UsernameMenu = () => {
             User Profile
           </Link>
         </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link
+            to="/manage-shop"
+            className="font-bold hover:text-blue-600 text-base"
+          >
+            Manage Shop
+          </Link>
+        </DropdownMenuItem>
         <Separator />
         <DropdownMenuItem>
           <Button

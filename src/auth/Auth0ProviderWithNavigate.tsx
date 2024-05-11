@@ -19,16 +19,16 @@ export const Auth0ProviderWithNavigate = ({ children }: Props) => {
     );
   }
 
-  const onRedirectCallback = () => {
-    navigate("/auth-callback");
+  const onRedirectCallback = (appState: any) => {
+    navigate(appState && appState.returnTo ? appState.returnTo : window.location.pathname);
   };
-
   return (
     <Auth0Provider
       domain={domain}
       clientId={clientId}
       authorizationParams={{ redirect_uri: redirectUri,audience }}
       onRedirectCallback={onRedirectCallback}
+      cacheLocation="localstorage" 
     >
       {children}
     </Auth0Provider>
