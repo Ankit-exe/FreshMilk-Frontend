@@ -22,8 +22,17 @@ export type Shop = {
     country: string;
     deliveryPrice: number;
     estimatedDeliveryTime: number;
-    cuisine: string[],
+    cuisines: string[],
     menuItems: MenuItem[],
     imageUrl: string,
     lastUpdated: string,
+}
+
+export type shopResponse = {
+    data: Shop[];
+    pagination: {
+        total: number;
+        page: number;
+        pages: number;
+    };
 }
