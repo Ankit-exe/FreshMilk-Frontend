@@ -70,6 +70,7 @@ export const HomePage = () => {
           <SearchBar
             placeHolder="Search by City or Shop"
             onSubmit={handleSeachSubmit}
+            searchQuery={""}
           />
         </div>
         <div className="grid md:grid-cols-2 gap-5 p-5">
